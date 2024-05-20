@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private float speed = 4f;
+    public float maxSpeed = 3f;
      
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
+        //horizontal = Input.GetAxis("Horizontal");
         
         isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.106f), 0,groundLayer);
 
@@ -82,5 +83,9 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
+
+        float move = 1.0f;
+
+        GetComponent<Rigidbody2D>().velocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
     }
 }
