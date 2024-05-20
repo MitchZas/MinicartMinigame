@@ -9,6 +9,7 @@ public class CoinCollect : MonoBehaviour
     if (collision.gameObject.CompareTag("Player"))
     {
         Debug.Log("Coin collected!");
+        FindObjectOfType<AudioManager>().Play("CoinCollect");
         Destroy(gameObject);
     }    
  }

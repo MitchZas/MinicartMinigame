@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Minecart Minigame.sln"
+    "dotnet.defaultSolution": "MinicartMinigame.sln"
 }

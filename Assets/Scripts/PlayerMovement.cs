@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -20,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
 
     bool isJumping;
     float jumpCounter;
+
+    private float horizontal;
+    private float speed = 4f;
      
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        horizontal = Input.GetAxis("Horizontal");
+        
         isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.106f), 0,groundLayer);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -71,5 +77,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity -= vecGravity * fallMultiplier * Time.deltaTime;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
     }
 }
