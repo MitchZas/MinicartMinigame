@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CoinCollect : MonoBehaviour
 {
- private void OnTriggerEnter2D(Collider2D collision) 
- {
-    if (collision.gameObject.CompareTag("Player"))
+    public int value;
+ 
+    private void OnTriggerEnter2D(Collider2D collision) 
     {
-        Debug.Log("Coin collected!");
-        FindObjectOfType<AudioManager>().Play("CoinCollect");
-        Destroy(gameObject);
-    }    
- }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            FindObjectOfType<AudioManager>().Play("CoinCollect");
+            Destroy(gameObject);
+            CoinCounter.instance.IncreaseCoins(value);
+        }    
+    }
 }
