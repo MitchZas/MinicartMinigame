@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     bool isJumping;
     float jumpCounter;
 
+    //public bool freezeRotation;
+
     private float horizontal;
     private float speed = 4f;
     public float maxSpeed = 3f;
@@ -45,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new UnityEngine.Vector2(rb.velocity.x, jumpForce);
             isJumping = true;
             jumpCounter = 0;
+
+            rb.freezeRotation = true;
         }
 
         if (rb.velocity.y > 0 && isJumping)
@@ -67,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = false;
             jumpCounter = 0;
+            rb.freezeRotation = false;
 
             if (rb.velocity.y > 0)
             {
