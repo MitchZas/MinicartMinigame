@@ -38,9 +38,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //horizontal = Input.GetAxis("Horizontal");
-        
-        isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.106f), 0,groundLayer);
+        isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.07f), 0,groundLayer);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
