@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
 
@@ -25,20 +26,38 @@ public class PlayerMovement : MonoBehaviour
     //public bool freezeRotation;
 
     private float horizontal;
-    private float speed = 4f;
+    private float speed = 8f;
     public float maxSpeed = 3f;
      
     // Start is called before the first frame update
     void Start()
     {
-        vecGravity = new UnityEngine.Vector2(0, -Physics2D.gravity.y);
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D collider) 
     {
-        isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.07f), 0,groundLayer);
+        if(collider.gameObject.CompareTag("Guy"))
+        {
+            guyMovement moveScript = collider.GetComponent<guyMovement>();
+            moveScript.canMove = false;
+
+            float move = 7.0f;
+            GetComponent<Rigidbody2D>().velocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
+
+        CartMovement();
+    }
+
+    
+    void CartMovement()
+    {
+        isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.07f), 0, groundLayer);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -81,14 +100,5 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity -= vecGravity * fallMultiplier * Time.deltaTime;
         }
-    }
-
-    private void FixedUpdate()
-    {
-        rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
-
-        float move = 1.0f;
-
-        GetComponent<Rigidbody2D>().velocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
     }
 }
