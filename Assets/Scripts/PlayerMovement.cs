@@ -28,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float speed = 8f;
     public float maxSpeed = 3f;
+    private float move = 7.0f;
+
+    public GameObject Guy;
+    public GameObject Cart;
      
     // Start is called before the first frame update
     void Start()
@@ -40,21 +44,17 @@ public class PlayerMovement : MonoBehaviour
         if(collider.gameObject.CompareTag("Guy"))
         {
             guyMovement moveScript = collider.GetComponent<guyMovement>();
-            moveScript.canMove = false;
-
-            float move = 7.0f;
+            moveScript.enabled = false;
+            //Guy.transform.parent = Cart.transform;
+            
             GetComponent<Rigidbody2D>().velocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            
+            rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
+            
+            CartMovement();
         }
     }
-
-    private void FixedUpdate()
-    {
-        rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
-
-        CartMovement();
-    }
-
-    
+  
     void CartMovement()
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.07f), 0, groundLayer);

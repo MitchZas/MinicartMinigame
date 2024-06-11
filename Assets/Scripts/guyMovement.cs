@@ -7,7 +7,7 @@ public class guyMovement : MonoBehaviour
     private float horizontal;
     private float speed = 5f;
 
-    Rigidbody2D rb;
+    Rigidbody2D guyRB;
     [SerializeField] int jumpPower;
 
     public Transform groundCheck;
@@ -18,7 +18,7 @@ public class guyMovement : MonoBehaviour
     
     void Start() 
     {
-        rb = GetComponent<Rigidbody2D>();
+        guyRB = GetComponent<Rigidbody2D>();
         canMove = true;
     }
     
@@ -34,13 +34,13 @@ public class guyMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded && canMove)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            guyRB.velocity = new Vector2(guyRB.velocity.x, jumpPower);
         }
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        guyRB.velocity = new Vector2(horizontal * speed, guyRB.velocity.y);
     }
 
 }
