@@ -23,49 +23,31 @@ public class PlayerMovement : MonoBehaviour
     bool isJumping;
     float jumpCounter;
 
-    //public bool freezeRotation;
-
     private float horizontal;
     private float speed = 8f;
     public float maxSpeed = 3f;
-    private float move = 7.0f;
-
-    public GameObject Guy;
-    public GameObject Cart;
      
     // Start is called before the first frame update
     void Start()
     {
+        vecGravity = new UnityEngine.Vector2(0, -Physics2D.gravity.y);
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void OnTriggerEnter2D(Collider2D collider) 
+    // Update is called once per frame
+    void Update()
     {
-        if(collider.gameObject.CompareTag("Guy"))
-        {
-            guyMovement moveScript = collider.GetComponent<guyMovement>();
-            moveScript.enabled = false;
-            //Guy.transform.parent = Cart.transform;
-            
-            GetComponent<Rigidbody2D>().velocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
-            
-            rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
-            
-            CartMovement();
-        }
-    }
-  
-    void CartMovement()
-    {
-        isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.07f), 0, groundLayer);
+        horizontal = Input.GetAxis("Horizontal");
+        //horizontal = Input.GetAxis("Horizontal");
+        
+        isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.106f), 0,groundLayer);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new UnityEngine.Vector2(rb.velocity.x, jumpForce);
             isJumping = true;
             jumpCounter = 0;
-
-            rb.freezeRotation = true;
+            transform.eulerAngles = new UnityEngine.Vector3(0, 0, 5);
         }
 
         if (rb.velocity.y > 0 && isJumping)
@@ -88,7 +70,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = false;
             jumpCounter = 0;
-            rb.freezeRotation = false;
 
             if (rb.velocity.y > 0)
             {
@@ -100,5 +81,14 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity -= vecGravity * fallMultiplier * Time.deltaTime;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
+
+        float move = 1.0f;
+
+        GetComponent<Rigidbody2D>().velocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
     }
 }
