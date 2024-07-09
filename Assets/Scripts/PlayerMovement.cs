@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float speed = 8f;
     public float maxSpeed = 3f;
+
+    private bool canMove;
      
     // Start is called before the first frame update
     void Start()
