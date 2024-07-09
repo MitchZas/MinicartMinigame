@@ -13,7 +13,9 @@ public class LevelChanger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            FadeToNextLevel();
+            //FadeToNextLevel();
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }    
     }
 
@@ -28,9 +30,9 @@ public class LevelChanger : MonoBehaviour
         SceneManager.LoadScene(leveltoLoad);
     }
 
-    public void FadeToNextLevel()
-    {
-        FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    //public void FadeToNextLevel()
+    //{
+        //FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+    //}
 
 }
