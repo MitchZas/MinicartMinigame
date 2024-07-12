@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6831628969490691}
   - component: {fileID: 6338267309205137941}
   - component: {fileID: 203917282564303432}
-  - component: {fileID: 4700412604494562924}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 554893655337734972}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 2.4383821, y: -0.74, z: -10}
   m_LocalScale: {x: 0.5266484, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -173,20 +172,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4700412604494562924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554893655337734972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd52ae6c6d9d6a4a8e7851835469119, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinText: {fileID: 0}
-  currentCoins: 0
 --- !u!1 &3375951687811786108
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +187,7 @@ GameObject:
   - component: {fileID: 1180608830581114056}
   - component: {fileID: 6912516297692162228}
   - component: {fileID: 6809776724438428805}
+  - component: {fileID: 4633678009203564786}
   m_Layer: 0
   m_Name: Cart
   m_TagString: Player
@@ -461,6 +447,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.30363154, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4633678009203564786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3375951687811786108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dffd608a4b94704698a26da264c940c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {fileID: 0}
+  scoreTextObj: {fileID: 0}
+  scoreText: {fileID: 0}
 --- !u!1 &5595715575946225443
 GameObject:
   m_ObjectHideFlags: 0
