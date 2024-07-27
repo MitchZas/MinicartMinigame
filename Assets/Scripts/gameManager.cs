@@ -6,4 +6,9 @@ public class gameManager : MonoBehaviour
 {
     public float moveSpeed = 1.0f;
     public Vector2 moveVector;
+
+    public void EndGame ()
+    {
+        Debug.Log("GAMEOVER");
+    }
 }
