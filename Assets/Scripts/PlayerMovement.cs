@@ -39,20 +39,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
         //horizontal = Input.GetAxis("Horizontal");
         
         isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.106f), 0,groundLayer);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.velocity = new UnityEngine.Vector2(rb.velocity.x, jumpForce);
+            rb.linearVelocity = new UnityEngine.Vector2(rb.linearVelocity.x, jumpForce);
             isJumping = true;
             jumpCounter = 0;
             transform.eulerAngles = new UnityEngine.Vector3(0, 0, 5);
         }
 
-        if (rb.velocity.y > 0 && isJumping)
+        if (rb.linearVelocity.y > 0 && isJumping)
         {
             jumpCounter += Time.deltaTime;
             if (jumpCounter > jumpTime) isJumping = false;
@@ -65,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
                 currentJumpM = jumpMultiplier * (1 - t);
             }
 
-            rb.velocity += vecGravity * currentJumpM * Time.deltaTime;
+            rb.linearVelocity += vecGravity * currentJumpM * Time.deltaTime;
         }
 
         if (Input.GetButtonUp("Jump"))
@@ -73,24 +72,24 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
             jumpCounter = 0;
 
-            if (rb.velocity.y > 0)
+            if (rb.linearVelocity.y > 0)
             {
-                rb.velocity = new UnityEngine.Vector2(rb.velocity.x, rb.velocity.y * 0.6f);
+                rb.linearVelocity = new UnityEngine.Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.6f);
             }
         }
 
-        if (rb.velocity.y <0)
+        if (rb.linearVelocity.y <0)
         {
-            rb.velocity -= vecGravity * fallMultiplier * Time.deltaTime;
+            rb.linearVelocity -= vecGravity * fallMultiplier * Time.deltaTime;
         }
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
+        //rb.linearVelocity = new UnityEngine.Vector2(horizontal * speed, rb.linearVelocity.y);
 
-        float move = 1.0f;
+        //float move = 1.0f;
 
-        GetComponent<Rigidbody2D>().velocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        //GetComponent<Rigidbody2D>().linearVelocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().linearVelocity.y);
     }
 }

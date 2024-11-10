@@ -34,13 +34,13 @@ public class guyMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded && canMove)
         {
-            guyRB.velocity = new Vector2(guyRB.velocity.x, jumpPower);
+            guyRB.linearVelocity = new Vector2(guyRB.linearVelocity.x, jumpPower);
         }
     }
 
     void FixedUpdate()
     {
-        guyRB.velocity = new Vector2(horizontal * speed, guyRB.velocity.y);
+        guyRB.linearVelocity = new Vector2(horizontal * speed, guyRB.linearVelocity.y);
     }
 
 }
