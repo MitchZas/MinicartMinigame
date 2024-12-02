@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //horizontal = Input.GetAxis("Horizontal");
+        horizontal = Input.GetAxis("Horizontal");
         
         isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.106f), 0,groundLayer);
 
@@ -86,10 +86,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //rb.linearVelocity = new UnityEngine.Vector2(horizontal * speed, rb.linearVelocity.y);
+        rb.linearVelocity = new UnityEngine.Vector2(horizontal * speed, rb.linearVelocity.y);
 
-        //float move = 1.0f;
+        float move = 1.0f;
 
-        //GetComponent<Rigidbody2D>().linearVelocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().linearVelocity.y);
+        GetComponent<Rigidbody2D>().linearVelocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().linearVelocity.y);
     }
 }

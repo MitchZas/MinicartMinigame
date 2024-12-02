@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class downRailSpawner : MonoBehaviour
 {
-    public GameObject flatRail;
+    public GameObject downRail;
     public float spawnRate;
     private float timer = 0;
     public float heightOffset = 2;
@@ -30,6 +30,6 @@ public class downRailSpawner : MonoBehaviour
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
 
-        Instantiate(flatRail, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
+        Instantiate(downRail, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
     }
 }
