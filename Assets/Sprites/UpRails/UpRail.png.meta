@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 1f4a6a99140468842a781b8f13b44207
+guid: eba943a04e2868b429c190917421f36d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5049243370253199504
-    second: DownRail_0
+      213: 6809593841542898494
+    second: UpRail_0
+  - first:
+      213: 8653486229287728540
+    second: UpRail_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DownRail_0
+      name: UpRail_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 659
-        width: 1742
-        height: 113
+        y: 312
+        width: 1699
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +157,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 077df8328eb7de9b0800000000000000
-      internalID: -5049243370253199504
+      spriteID: e332ad52589808e50800000000000000
+      internalID: 6809593841542898494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpRail_1
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 0
+        width: 7
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95fd6d90eb571870800000000000000
+      internalID: 8653486229287728540
       vertices: []
       indices: 
       edges: []
@@ -173,8 +198,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      DownRail_0: -5049243370253199504
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 1f4a6a99140468842a781b8f13b44207
+guid: 54641cc6b60f50046ad000f5f0a1a613
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5049243370253199504
-    second: DownRail_0
+      213: -7383168387096375963
+    second: CoalPieces_0
+  - first:
+      213: 8138993849189426487
+    second: CoalPieces_1
+  - first:
+      213: 2647693255100748216
+    second: CoalPieces_2
+  - first:
+      213: -3047625754711461713
+    second: CoalPieces_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DownRail_0
+      name: CoalPieces_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 659
-        width: 1742
-        height: 113
+        x: 950
+        y: 4681
+        width: 234
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 077df8328eb7de9b0800000000000000
-      internalID: -5049243370253199504
+      spriteID: 56d0a3a3877b98990800000000000000
+      internalID: -7383168387096375963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoalPieces_1
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 4420
+        width: 305
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735660a98c383f070800000000000000
+      internalID: 8138993849189426487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoalPieces_2
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 4059
+        width: 169
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b15a78ccfe7eb420800000000000000
+      internalID: 2647693255100748216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoalPieces_3
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 4154
+        width: 230
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0771ae588a4b5d0800000000000000
+      internalID: -3047625754711461713
       vertices: []
       indices: 
       edges: []
@@ -174,7 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DownRail_0: -5049243370253199504
+      CoalPieces_0: -7383168387096375963
+      CoalPieces_1: 8138993849189426487
+      CoalPieces_2: 2647693255100748216
+      CoalPieces_3: -3047625754711461713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
