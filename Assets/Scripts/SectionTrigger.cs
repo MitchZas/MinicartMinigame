@@ -7,16 +7,24 @@ public class SectionTrigger : MonoBehaviour
 
     public Canvas coalDepositCanvas;
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Trigger"))
-        {
-            Instantiate(newSection, new Vector3(108,-4, 9), Quaternion.identity);
-        }
+    public GameObject cartCoal;
 
-        if (other.gameObject.CompareTag("Furnance"))
+    void OnTriggerEnter2D(Collider2D other)
+    { 
+        if (other.gameObject.CompareTag("Button"))
         {
             coalDepositCanvas.gameObject.SetActive(true);
+            DepositCoal();
+        }
+
+        void DepositCoal()
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                coalDepositCanvas.gameObject.SetActive(false);
+                Debug.Log("Coal was deposited");
+                //cartCoal.gameObject.SetActive(false);
+            }
         }
     }
 

@@ -9,6 +9,7 @@ TagManager:
   - CoalD
   - CartCoal
   - Furnance
+  - Button
   layers:
   - Default
   - TransparentFX
