@@ -1,3 +1,4 @@
+using TMPro.Examples;
 using UnityEngine;
 
 public class DepositCoal : MonoBehaviour
@@ -5,13 +6,17 @@ public class DepositCoal : MonoBehaviour
     public Canvas coalDepositCanvas;
     public GameObject cartCoal;
 
+    public int minCoal = 0;
+    public int currentCoal;
+
     private bool triggerEntered = false;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true)
             {
-            CoalDeposit();
+                CartEnter();
+                CoalDeposit();
             }
 
     }
@@ -31,13 +36,18 @@ public class DepositCoal : MonoBehaviour
 
     void CoalDeposit()
     {
-        triggerEntered = true;
-
-        if (Input.GetKeyDown(KeyCode.E))
         {
-            coalDepositCanvas.gameObject.SetActive(false);
-            Debug.Log("Coal was deposited");
-            cartCoal.gameObject.SetActive(false);
+            // If there is one coal object active, set the value to 1
+            // If there are two coal objects active, set the value to 2
+            // If there are three coal objects active, set the value to 3
+            // If there are four coal objects active, set the value to 4
         }
+    }
+
+    void CartEnter()
+    {
+        triggerEntered = true;
+        coalDepositCanvas.gameObject.SetActive(false);
+        cartCoal.gameObject.SetActive(false);
     }
 }

@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Jump System")]
     [SerializeField] float jumpTime;
-    [SerializeField] float jumpForce = 10;
+    [SerializeField] public float jumpForce = 10;
     [SerializeField] float fallMultiplier;
     [SerializeField] float jumpMultiplier;
 
