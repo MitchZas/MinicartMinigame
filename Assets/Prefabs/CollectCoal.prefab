@@ -150,4 +150,4 @@ MonoBehaviour:
   coalAppear: {fileID: 0}
   coalDisappear: {fileID: 6639499033017356398}
   cart: {fileID: 0}
-  coalNumber: 0
+  destroyScript: 0

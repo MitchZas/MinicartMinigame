@@ -25,8 +25,8 @@ public class DestroyCoal : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            AddCoal();
             Destroy(gameObject);
+            AddCoal(); 
         }
     }
 
