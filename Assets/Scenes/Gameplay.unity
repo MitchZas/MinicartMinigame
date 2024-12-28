@@ -2477,6 +2477,7 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -8.683548, y: 0.5885701}
+  - {x: 0.5296507, y: 0.5615402}
   - {x: 4.715407, y: 0.5492599}
   - {x: 8.035303, y: 0.09919715}
   - {x: 8.71, y: 0}
@@ -2548,7 +2549,7 @@ Transform:
   m_GameObject: {fileID: 1067082348}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -77.25305, y: -1.89, z: 8.392519}
+  m_LocalPosition: {x: -77.25305, y: -6, z: 8.392519}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3317,7 +3318,7 @@ GameObject:
   - component: {fileID: 1279467869}
   - component: {fileID: 1279467868}
   - component: {fileID: 1279467871}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Open Sprite Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3465,14 +3466,14 @@ Transform:
   m_GameObject: {fileID: 1279467867}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.57, y: -7.72, z: 0}
+  m_LocalPosition: {x: 5.57, y: -2.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1279467871
-PolygonCollider2D:
+--- !u!68 &1279467871
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3506,35 +3507,29 @@ PolygonCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_EdgeRadius: 0.3
   m_Points:
-    m_Paths:
-    - - {x: -7.832686, y: 1.6667855}
-      - {x: -6.6882634, y: 1.6755995}
-      - {x: -4.601388, y: 1.6690696}
-      - {x: -2.079803, y: 1.6456963}
-      - {x: -0.91151893, y: 1.6307598}
-      - {x: 0.4079444, y: 1.6483557}
-      - {x: 0.988768, y: 1.6440089}
-      - {x: 1.6165936, y: 1.6265035}
-      - {x: 2.2773209, y: 1.5910059}
-      - {x: 3.040042, y: 1.522232}
-      - {x: 3.641077, y: 1.44671}
-      - {x: 4.3159037, y: 1.328248}
-      - {x: 4.9672265, y: 1.1724689}
-      - {x: 5.580944, y: 0.97454274}
-      - {x: 6.1429534, y: 0.72964144}
-      - {x: 6.6391544, y: 0.43293938}
-      - {x: 7.0707006, y: 0.06666824}
-  m_UseDelaunayMesh: 0
+  - {x: -7.832686, y: 1.6667855}
+  - {x: -6.6882634, y: 1.6755995}
+  - {x: -4.601388, y: 1.6690696}
+  - {x: -2.079803, y: 1.6456963}
+  - {x: -0.91151893, y: 1.6307598}
+  - {x: 0.4079444, y: 1.6483557}
+  - {x: 0.988768, y: 1.6440089}
+  - {x: 1.6165936, y: 1.6265035}
+  - {x: 2.2773209, y: 1.5910059}
+  - {x: 3.040042, y: 1.522232}
+  - {x: 3.641077, y: 1.44671}
+  - {x: 4.3159037, y: 1.328248}
+  - {x: 4.9672265, y: 1.1724689}
+  - {x: 5.580944, y: 0.97454274}
+  - {x: 6.1429534, y: 0.72964144}
+  - {x: 6.6391544, y: 0.43293938}
+  - {x: 7.0707006, y: 0.06666824}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1315778621
 GameObject:
   m_ObjectHideFlags: 0
@@ -6420,7 +6415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180608830581114056, guid: c37759815177ab145a4794805740fd2a, type: 3}
       propertyPath: m_Size.y
-      value: 1.802777
+      value: 1.7782359
       objectReference: {fileID: 0}
     - target: {fileID: 1180608830581114056, guid: c37759815177ab145a4794805740fd2a, type: 3}
       propertyPath: m_Enabled
@@ -6428,11 +6423,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180608830581114056, guid: c37759815177ab145a4794805740fd2a, type: 3}
       propertyPath: m_Offset.x
-      value: -0.09993455
+      value: -0.09993458
       objectReference: {fileID: 0}
     - target: {fileID: 1180608830581114056, guid: c37759815177ab145a4794805740fd2a, type: 3}
       propertyPath: m_Offset.y
-      value: 0.7925916
+      value: 0.80486214
       objectReference: {fileID: 0}
     - target: {fileID: 1180608830581114056, guid: c37759815177ab145a4794805740fd2a, type: 3}
       propertyPath: m_IsTrigger
