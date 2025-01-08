@@ -33,6 +33,7 @@ public class DestroyCoal : MonoBehaviour
     public void AddCoal()
     {
         Debug.Log(coalNumber += 1);
+        Object.FindAnyObjectByType<AudioManager>().Play("CoalCollect");
         //coalDisappear.SetActive(false);
         coalAppear.SetActive(true);
         playerMovementScript.jumpForce -= 2;

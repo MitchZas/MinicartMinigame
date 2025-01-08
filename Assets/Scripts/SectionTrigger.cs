@@ -5,7 +5,7 @@ public class SectionTrigger : MonoBehaviour
 {
     public GameObject newSection;
 
-    public Canvas coalDepositCanvas;
+    //public Canvas coalDepositCanvas;
 
     public GameObject cartCoal;
 
@@ -13,7 +13,7 @@ public class SectionTrigger : MonoBehaviour
     { 
         if (other.gameObject.CompareTag("Button"))
         {
-            coalDepositCanvas.gameObject.SetActive(true);
+           // coalDepositCanvas.gameObject.SetActive(true);
             DepositCoal();
         }
 
@@ -21,7 +21,7 @@ public class SectionTrigger : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                coalDepositCanvas.gameObject.SetActive(false);
+                //coalDepositCanvas.gameObject.SetActive(false);
                 Debug.Log("Coal was deposited");
                 //cartCoal.gameObject.SetActive(false);
             }

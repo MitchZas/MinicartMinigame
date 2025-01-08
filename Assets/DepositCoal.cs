@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro.Examples;
 using UnityEngine;
 
@@ -29,14 +30,12 @@ public class DepositCoal : MonoBehaviour
                 CartEnter();
                 CoalDeposit();
             }
-
     }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            triggerEntered = true;
-            coalDepositCanvas.gameObject.SetActive(true);
+            StartCoroutine(CartTrigger());
         }
     }
 
@@ -86,5 +85,12 @@ public class DepositCoal : MonoBehaviour
         triggerEntered = true;
         coalDepositCanvas.gameObject.SetActive(false);
         cartCoal.gameObject.SetActive(false);
+    }
+
+    IEnumerator CartTrigger()
+    {
+        triggerEntered = true;
+        yield return new WaitForSeconds(1);
+        coalDepositCanvas.gameObject.SetActive(true);
     }
 }
