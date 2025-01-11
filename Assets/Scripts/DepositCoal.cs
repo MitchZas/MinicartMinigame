@@ -28,6 +28,7 @@ public class DepositCoal : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true)
             {
                 CartEnter();
+                Object.FindAnyObjectByType<AudioManager>().Play("CoalDeposit");
                 CoalDeposit();
             }
     }
