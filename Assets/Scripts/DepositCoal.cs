@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro.Examples;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class DepositCoal : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class DepositCoal : MonoBehaviour
     public int coalDeposited;
 
     public CalculateCoal calculateCoal;
+
+    public Light2D globalLight;
 
     private bool triggerEntered = false;
     private DestroyCoal destroyCoalscript;
@@ -52,30 +55,35 @@ public class DepositCoal : MonoBehaviour
             if (DestroyCoal.coalNumber == 0)
             {
                 calculateCoal.SetCoal(0);
+                globalLight.intensity = 0;
                 Debug.Log("No Coal was deposited");
             }
             // If there is one coal object active, set the value to 1
             if (DestroyCoal.coalNumber == 1)
             {
                 calculateCoal.SetCoal(1);
+                globalLight.intensity = .15f;
                 Debug.Log("One Coal was deposited");
             }
             // If there are two coal objects active, set the value to 2
             if (DestroyCoal.coalNumber == 2)
             {
                 calculateCoal.SetCoal(2);
+                globalLight.intensity = .50f;
                 Debug.Log("Two Coal were deposited");
             }
             // If there are three coal objects active, set the value to 3
             if (DestroyCoal.coalNumber == 3)
             {
                 calculateCoal.SetCoal(3);
+                globalLight.intensity = 0.75f;
                 Debug.Log("Three Coal were deposited");
             }
             // If there are four coal objects active, set the value to 4
             if (DestroyCoal.coalNumber == 4)
             {
                 calculateCoal.SetCoal(4);
+                globalLight.intensity = 1;
                 Debug.Log("Four Coal were deposited");
             }
         }
