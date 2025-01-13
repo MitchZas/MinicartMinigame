@@ -92,4 +92,10 @@ public class PlayerMovement : MonoBehaviour
 
         GetComponent<Rigidbody2D>().linearVelocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().linearVelocity.y);
     }
+
+    public float rotationSpeed = 10f;
+    public void LightControl()
+    {
+        transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+    }
 }

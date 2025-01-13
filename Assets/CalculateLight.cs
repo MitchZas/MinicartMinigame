@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -5,8 +6,11 @@ public class CalculateLight : MonoBehaviour
 {
     public Light2D globalLight;
 
+    public Light2D spotLight;
+
     private void Start()
     {
+        spotLight.gameObject.SetActive(false);
         LightAmount();
     }
 
@@ -15,11 +19,13 @@ public class CalculateLight : MonoBehaviour
         if(CoalScore.totalCoal == 0)
         {
             globalLight.intensity = 0;
+            spotLight.gameObject.SetActive(true);
         }
 
         if (CoalScore.totalCoal == 1)
         {
-            globalLight.intensity = .15f;
+            globalLight.intensity = .09f;
+            spotLight.gameObject.SetActive(true);
         }
 
         if (CoalScore.totalCoal == 2)
