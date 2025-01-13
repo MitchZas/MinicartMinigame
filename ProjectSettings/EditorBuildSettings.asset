@@ -12,12 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 6d31016999dd8db42a2191bb2084d05e
+  - enabled: 0
     path: Assets/Scenes/Level1.unity
     guid: 7923d721dd04835408fc4a8b55b6caa9
   - enabled: 1
     path: Assets/Prefabs/Level1Part2.unity
     guid: 543c7bbd75f2c354fa3a18777bcbbc0a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level3.unity
     guid: 9a138c758f5f40f4cb0a0c38ab38c15a
   - enabled: 1
