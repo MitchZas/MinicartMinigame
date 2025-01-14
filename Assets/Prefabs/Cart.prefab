@@ -315,6 +315,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   maxSpeed: 8
+  rotationSpeed: 10
 --- !u!61 &1180608830581114056
 BoxCollider2D:
   m_ObjectHideFlags: 0
