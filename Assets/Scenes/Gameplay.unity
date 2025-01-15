@@ -2290,26 +2290,37 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 78138d7e942f4074ba4a2ae015ef209e, type: 3}
     volume: 0.3
     pitch: 0.75
+    loop: 0
     source: {fileID: 0}
   - name: GameOver
     clip: {fileID: 8300000, guid: 5966cfd3124be1a4f8e5446c9975a900, type: 3}
     volume: 0.5
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: CoalCollect
     clip: {fileID: 8300000, guid: 2d5d78048025c8343a680e87e150df83, type: 3}
     volume: 0.75
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: CoalDeposit
     clip: {fileID: 8300000, guid: 797b7079fb51e4f4e9815a5bc5a9e49f, type: 3}
     volume: 0.5
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: ButtonClick
     clip: {fileID: 8300000, guid: ec4ab02b441d85a4da20e385238814be, type: 3}
     volume: 0.5
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: 3579d6caa0a458c4dbc58295d2b11319, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &827006652
 Transform:
