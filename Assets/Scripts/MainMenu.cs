@@ -22,7 +22,12 @@ public class MainMenu : MonoBehaviour
         //scenesToLoad.Add(SceneManager.LoadSceneAsync("Level1", LoadSceneMode.Additive));
    }
 
-   public void QuitGame()
+   public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+    
+    public void QuitGame()
    {
         Application.Quit();
    }

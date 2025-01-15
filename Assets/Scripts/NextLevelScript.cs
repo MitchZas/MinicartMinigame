@@ -6,7 +6,7 @@ public class NextLevelScript : MonoBehaviour
     [SerializeField] AudioSource buttonClickAudio;
     public void NextLevel()
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         buttonClickAudio.Play();
     }
 }
