@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -42,9 +41,11 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         
         isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.106f), 0,groundLayer);
+        //Object.FindAnyObjectByType<AudioManager>().Play("CartRoll");
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            //Object.FindAnyObjectByType<AudioManager>().Play("CartJump");
             rb.linearVelocity = new UnityEngine.Vector2(rb.linearVelocity.x, jumpForce);
             isJumping = true;
             jumpCounter = 0;
