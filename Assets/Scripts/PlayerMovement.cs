@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float fallMultiplier;
     [SerializeField] float jumpMultiplier;
 
+    public AudioSource cartRollSFX;
+
     Rigidbody2D rb;
 
     public Transform groundCheck;
@@ -26,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float speed = 8f;
     public float maxSpeed = 3f;
+
+    
 
     private bool canMove;
      
@@ -42,8 +46,7 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         
         isGrounded = Physics2D.OverlapBox(groundCheck.position,new UnityEngine.Vector2(1.0f,.106f), 0,groundLayer);
-        //Object.FindAnyObjectByType<AudioManager>().Play("CartRoll");
-
+        
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             Object.FindAnyObjectByType<AudioManager>().Play("CartJump");
@@ -71,17 +74,21 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonUp("Jump"))
         {
+            cartRollSFX.Stop();
             isJumping = false;
             jumpCounter = 0;
 
             if (rb.linearVelocity.y > 0)
             {
+                cartRollSFX.Play();
+                //Object.FindAnyObjectByType<AudioManager>().Play("CartRoll");
                 rb.linearVelocity = new UnityEngine.Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.6f);
             }
         }
 
         if (rb.linearVelocity.y <0)
         {
+            
             rb.linearVelocity -= vecGravity * fallMultiplier * Time.deltaTime;
         }
 
@@ -93,16 +100,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new UnityEngine.Vector2(horizontal * speed, rb.linearVelocity.y);
-
-        float move = 1.0f;
-
-        GetComponent<Rigidbody2D>().linearVelocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().linearVelocity.y);
+        CartMovement();
     }
 
     public float rotationSpeed = 10f;
     public void LightControl()
     {
         transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+    }
+
+    void CartMovement()
+    {
+        
+        rb.linearVelocity = new UnityEngine.Vector2(horizontal * speed, rb.linearVelocity.y);
+        float move = 1.0f;
+        GetComponent<Rigidbody2D>().linearVelocity = new UnityEngine.Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().linearVelocity.y);
+        
     }
 }

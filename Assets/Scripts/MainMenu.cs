@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
     //public Button button;
     public Vector3 pressedScale = new Vector3(0.9f, 0.9f, 1f);
 
+    [SerializeField] AudioSource buttonClickAudio;
+
     private void Start()
     {
         //button = GetComponent<Button>();
@@ -18,17 +20,19 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
    {
+        buttonClickAudio.Play();
         scenesToLoad.Add(SceneManager.LoadSceneAsync("Gameplay"));
-        //scenesToLoad.Add(SceneManager.LoadSceneAsync("Level1", LoadSceneMode.Additive));
    }
 
    public void Tutorial()
     {
-        SceneManager.LoadScene("Tutorial");
+        buttonClickAudio.Play();
+        SceneManager.LoadScene("TutorialText");
     }
     
     public void QuitGame()
    {
+        buttonClickAudio.Play();
         Application.Quit();
    }
 }
