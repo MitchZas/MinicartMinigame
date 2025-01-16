@@ -14,4 +14,14 @@ public class NextLevelScript : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(8);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

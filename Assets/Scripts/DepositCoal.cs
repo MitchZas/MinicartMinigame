@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro.Examples;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class DepositCoal : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class DepositCoal : MonoBehaviour
     private bool triggerEntered = false;
     private DestroyCoal destroyCoalscript;
 
+    public int currentLevel = 0;
+
     void Start()
     {
         destroyCoalscript = collectCoal.GetComponent<DestroyCoal>();
@@ -36,6 +39,11 @@ public class DepositCoal : MonoBehaviour
                 Object.FindAnyObjectByType<AudioManager>().Play("CoalDeposit");
                 CoalDeposit(); 
             }
+
+        if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true && currentLevel == 3)
+        {
+           StartCoroutine(LastLevel());
+;       }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -110,5 +118,14 @@ public class DepositCoal : MonoBehaviour
         coalDepositCanvas.gameObject.SetActive(true);
         yield return new WaitForSeconds(1);
         NextLevelCanvas.gameObject.SetActive(true);
+    }
+
+    IEnumerator LastLevel()
+    {
+        CartEnter();
+        Object.FindAnyObjectByType<AudioManager>().Play("CoalDeposit");
+        CoalDeposit();
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(9);
     }
 }

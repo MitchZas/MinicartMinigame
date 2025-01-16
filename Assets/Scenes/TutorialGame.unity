@@ -1729,7 +1729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3156517088670505914, guid: 180fba5955f551c4da2962573a3df34b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 128.89
+      value: 128.44
       objectReference: {fileID: 0}
     - target: {fileID: 3156517088670505914, guid: 180fba5955f551c4da2962573a3df34b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2710,6 +2710,7 @@ MonoBehaviour:
   coalDeposited: 0
   calculateCoal: {fileID: 0}
   globalLight: {fileID: 619394801}
+  currentLevel: 0
 --- !u!1001 &703800485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2724,7 +2725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3156517088670505914, guid: 180fba5955f551c4da2962573a3df34b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 110.82
+      value: 110.52
       objectReference: {fileID: 0}
     - target: {fileID: 3156517088670505914, guid: 180fba5955f551c4da2962573a3df34b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4142,7 +4143,7 @@ Transform:
   m_GameObject: {fileID: 1126263470}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77.03, y: -2.4, z: -10}
+  m_LocalPosition: {x: -1.8599997, y: -2.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4701,7 +4702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2295552850552759751, guid: c37759815177ab145a4794805740fd2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 72.4
+      value: -6.49
       objectReference: {fileID: 0}
     - target: {fileID: 2295552850552759751, guid: c37759815177ab145a4794805740fd2a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5834,6 +5835,7 @@ MonoBehaviour:
   coalDeposited: 0
   calculateCoal: {fileID: 0}
   globalLight: {fileID: 0}
+  currentLevel: 0
 --- !u!1 &1519781068
 GameObject:
   m_ObjectHideFlags: 0

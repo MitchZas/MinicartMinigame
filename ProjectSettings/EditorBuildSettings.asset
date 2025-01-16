@@ -19,18 +19,24 @@ EditorBuildSettings:
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Level2.unity
-    guid: 6d31016999dd8db42a2191bb2084d05e
+    guid: bb4df6401d73a5844ac60905ba5cf009
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: e5d5dc4aeadbf4f448e71f487673ae19
   - enabled: 0
     path: Assets/Scenes/Level1.unity
     guid: 7923d721dd04835408fc4a8b55b6caa9
   - enabled: 1
     path: Assets/Prefabs/Level1Part2.unity
     guid: 543c7bbd75f2c354fa3a18777bcbbc0a
-  - enabled: 0
-    path: Assets/Scenes/Level3.unity
-    guid: 9a138c758f5f40f4cb0a0c38ab38c15a
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: f2366aa42ab93af4da42682696d18259
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 9a2406bbfaf4fa24cbb74ce525ee662b
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 40672c4d1505ac44fb7af9fa8e6a4df3
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
