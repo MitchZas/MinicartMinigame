@@ -24,19 +24,19 @@ public class CalculateLight : MonoBehaviour
 
         if (CoalScore.totalCoal == 1)
         {
-            globalLight.intensity = .01f;
+            globalLight.intensity = .5f;
             spotLight.gameObject.SetActive(true);
         }
 
         if (CoalScore.totalCoal == 2)
         {
-            globalLight.intensity = .2f;
+            globalLight.intensity = .75f;
             spotLight.gameObject.SetActive(true);
         }
 
         if (CoalScore.totalCoal == 3)
         {
-            globalLight.intensity = .3f;
+            globalLight.intensity = .85f;
             spotLight.gameObject.SetActive(true);
         }
 
