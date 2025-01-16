@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 193735069}
   - component: {fileID: 193735068}
   m_Layer: 0
-  m_Name: UI board Large Set
+  m_Name: LeftBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,8 +200,8 @@ Transform:
   m_GameObject: {fileID: 193735067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17, y: 1.5, z: 0}
-  m_LocalScale: {x: 0.60666, y: 0.60666, z: 0.60666}
+  m_LocalPosition: {x: 18.54, y: -0.19, z: 0}
+  m_LocalScale: {x: 0.7536536, y: 0.7536536, z: 0.7536536}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -308,7 +308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -315, y: 138}
+  m_AnchoredPosition: {x: -750, y: 184}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244252975
@@ -331,11 +331,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Objective: Collect coal to place in the furnance
+  m_text: 'Collect coal to place in the furnance
 
 
-    The more coal collected,
-    the heavier the cart becomes'
+    The more coal collected, the
+    heavier the cart becomes'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5df4fdbf634340c468dedd78be1c7a02, type: 2}
   m_sharedMaterial: {fileID: 4466143761934463218, guid: 5df4fdbf634340c468dedd78be1c7a02, type: 2}
@@ -362,8 +362,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -400,7 +400,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -60.11859, w: -166.79636}
+  m_margin: {x: 0, y: 0, z: -527.73724, w: -340.8616}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 389101044}
   - component: {fileID: 389101043}
   m_Layer: 0
-  m_Name: UI board Large Set (1)
+  m_Name: RightBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -495,8 +495,8 @@ Transform:
   m_GameObject: {fileID: 389101042}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27, y: 1.5, z: 0}
-  m_LocalScale: {x: 0.60666, y: 0.60666, z: 0.60666}
+  m_LocalPosition: {x: 26.05, y: -0.24, z: 0}
+  m_LocalScale: {x: 0.7536536, y: 0.7536536, z: 0.7536536}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1769,7 +1769,7 @@ RectTransform:
   m_GameObject: {fileID: 1836767281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5638227, y: 1.6330465, z: 1.37625}
+  m_LocalScale: {x: 2.5452778, y: 2.6579463, z: 2.2399845}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 668263843}
@@ -1777,7 +1777,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -21, y: 10}
+  m_AnchoredPosition: {x: -25, y: 14}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1836767283
@@ -2104,7 +2104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: 138}
+  m_AnchoredPosition: {x: 211, y: 118}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047433935
@@ -2155,8 +2155,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2193,7 +2193,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -60.11859, w: -166.79636}
+  m_margin: {x: 0, y: 0, z: -551.99994, w: -166.79636}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

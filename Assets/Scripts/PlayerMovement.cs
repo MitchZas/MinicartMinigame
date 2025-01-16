@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            //Object.FindAnyObjectByType<AudioManager>().Play("CartJump");
+            Object.FindAnyObjectByType<AudioManager>().Play("CartJump");
             rb.linearVelocity = new UnityEngine.Vector2(rb.linearVelocity.x, jumpForce);
             isJumping = true;
             jumpCounter = 0;
@@ -82,6 +83,11 @@ public class PlayerMovement : MonoBehaviour
         if (rb.linearVelocity.y <0)
         {
             rb.linearVelocity -= vecGravity * fallMultiplier * Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
