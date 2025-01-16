@@ -9,4 +9,9 @@ public class NextLevelScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         buttonClickAudio.Play();
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
