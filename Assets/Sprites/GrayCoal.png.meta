@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GrayCoal_0: 2037562123233722118
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

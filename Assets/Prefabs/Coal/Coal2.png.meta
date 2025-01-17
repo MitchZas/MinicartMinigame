@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Coal2_0: 8335226294127459206
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
