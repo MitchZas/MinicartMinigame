@@ -6143,7 +6143,6 @@ GameObject:
   - component: {fileID: 1315778622}
   - component: {fileID: 1315778623}
   - component: {fileID: 1315778624}
-  - component: {fileID: 1315778625}
   - component: {fileID: 1315778626}
   m_Layer: 0
   m_Name: GameManager
@@ -6194,18 +6193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coalPieces: []
---- !u!114 &1315778625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1315778621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b05279be972ff074285473ef8631b819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1315778626
 MonoBehaviour:
   m_ObjectHideFlags: 0
