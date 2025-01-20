@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 379238236}
   - component: {fileID: 379238235}
   m_Layer: 0
-  m_Name: ButtonClickAudioSource
+  m_Name: ButtonClick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
